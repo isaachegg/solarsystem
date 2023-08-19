@@ -1,0 +1,29 @@
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+main {
+  position: absolute;
+  display: flex;
+  justify-content: right;
+}
+.right {
+  position: relative;
+  top: 50%;
+}
+
+#pauseButton {
+  border: 2px solid;
+  border-radius: 3px;
+  border-color: aliceblue;
+  background-color: transparent;
+  color: aliceblue;
+  font-size: 20px;
+  width: 100px;
+  height: 35px;
+  text-align: center;
+  justify-content: right;
+}
+

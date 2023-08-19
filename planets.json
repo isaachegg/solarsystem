@@ -1,0 +1,91 @@
+{
+    "planets": [
+        {
+            "name": "Sun",
+            "rotationRate": 13.5,
+            "planetSize": 430000,
+            "maxSize": 100,
+            "tilt": 1.444
+        },
+        {
+            "name": "Mercury",
+            "orbitalPeriod": 88,
+            "planetSize": 1516,
+            "rotationRate": 6.18,
+            "semimajorAxis": 58000000,
+            "eccentricity": 0.2,
+            "maxSize": 15000,
+            "tilt": 1.57
+        },
+        {
+            "name": "Venus",
+            "orbitalPeriod": 222.4,
+            "planetSize": 3760,
+            "rotationRate": -1.48,
+            "semimajorAxis": 108000000,
+            "eccentricity": 0.007,
+            "maxSize": 15000,
+            "tilt": 1.521
+        },
+        {
+            "name": "Earth",
+            "orbitalPeriod": 365.24,
+            "planetSize": 3958,
+            "rotationRate": 365.24,
+            "semimajorAxis": 149000000,
+            "eccentricity": 0.017,
+            "maxSize": 15000,
+            "tilt": 1.161
+        },
+        {
+            "name": "Mars",
+            "orbitalPeriod": 687,
+            "planetSize": 2106,
+            "rotationRate": 353.17,
+            "semimajorAxis": 228000000,
+            "eccentricity": 0.093,
+            "maxSize": 15000,
+            "tilt": 1.141
+        },
+        {
+            "name": "Jupiter",
+            "orbitalPeriod": 4333,
+            "planetSize": 43441,
+            "rotationRate": 914.53,
+            "semimajorAxis": 778000000,
+            "eccentricity": 0.049,
+            "maxSize": 1500,
+            "tilt": 1.521
+        },
+        {
+            "name": "Saturn",
+            "orbitalPeriod": 10756,
+            "planetSize": 36184,
+            "rotationRate": 827.43,
+            "semimajorAxis": 1432000000,
+            "eccentricity": 0.052,
+            "maxSize": 1500,
+            "tilt": 1.1
+        },
+        {
+            "name": "Uranus",
+            "orbitalPeriod": 30687,
+            "planetSize": 15759,
+            "rotationRate": 507.82,
+            "semimajorAxis": 2867000000,
+            "eccentricity": 0.0469,
+            "maxSize": 1500,
+            "tilt": -0.134
+        },
+        {
+            "name": "Neptune",
+            "orbitalPeriod": 60190,
+            "planetSize": 15299,
+            "rotationRate": 544.09,
+            "semimajorAxis": 4514000000,
+            "eccentricity": 0.0086,
+            "maxSize": 1500,
+            "tilt": 1.05
+        }
+    ]
+}
