@@ -330,6 +330,9 @@ const neptuneIndicatorMaterial = new THREE.LineBasicMaterial( { color: 0xff0000 
 const neptuneIndicatorEllipse = new THREE.Line( neptuneIndicatorGeometry, neptuneIndicatorMaterial );
 scene.add(neptuneIndicatorEllipse);
 
+const planets = [sun,mercury,venus,earth,mars,jupiter,saturn,uranus,neptune];
+
+
 //***functions***//
 
 //calacuates the x and y coordient of planet in orbit on a 2d plane
@@ -418,77 +421,59 @@ function movement() {
     time = timer.getTime1();
     
     //rotation
-    sun.rotation.y += planetsData.planets[0]['rotationRate'] * rotationRateScale;
-    mercury.rotation.y += planetsData.planets[1]['rotationRate'] * rotationRateScale;
-    venus.rotation.y += planetsData.planets[2]['rotationRate'] * rotationRateScale;
-    earth.rotation.y += planetsData.planets[3]['rotationRate'] * rotationRateScale;
-    mars.rotation.y += planetsData.planets[4]['rotationRate'] * rotationRateScale;
-    jupiter.rotation.y += planetsData.planets[5]['rotationRate'] * rotationRateScale;
-    saturn.rotation.y += planetsData.planets[6]['rotationRate'] * rotationRateScale;
-    uranus.rotation.y += planetsData.planets[7]['rotationRate'] * rotationRateScale;
-    neptune.rotation.y += planetsData.planets[8]['rotationRate'] * rotationRateScale;
+
+    planets.forEach((planet, i) => {
+      planet.rotation.y += planetsData.planets[i]['rotationRate'] * rotationRateScale;
+      
+      if (i != 0) {
+        planet.position.x = orbitalCalculations(getValue(i,'semimajorAxis'), getValue(i,'eccentricity'), getValue(i,'orbitalPeriod'), time)[0];
+        planet.position.y = orbitalCalculations(getValue(i,'semimajorAxis'), getValue(i,'eccentricity'), getValue(i,'orbitalPeriod'), time)[1];
+      }
+    });
 
 
     //Orbital Animations 
     //Mercury
-    mercury.position.x = orbitalCalculations(getValue(1,'semimajorAxis'), getValue(1,'eccentricity'), getValue(1,'orbitalPeriod'), time)[0];
-    mercury.position.y = orbitalCalculations(getValue(1,'semimajorAxis'), getValue(1,'eccentricity'), getValue(1,'orbitalPeriod'), time)[1];
+  
     mercuryIndicatorEllipse.position.x = mercury.position.x;
     mercuryIndicatorEllipse.position.y = mercury.position.y;
     
     //venus
-    venus.position.x = orbitalCalculations(getValue(2,'semimajorAxis'), getValue(2,'eccentricity'), getValue(2,'orbitalPeriod'), time)[0];
-    venus.position.y = orbitalCalculations(getValue(2,'semimajorAxis'), getValue(2,'eccentricity'), getValue(2,'orbitalPeriod'), time)[1];
+    
     venusIndicatorEllipse.position.x = venus.position.x;
     venusIndicatorEllipse.position.y = venus.position.y;
 
     //earth
-    earth.position.x = orbitalCalculations(getValue(3,'semimajorAxis'), getValue(3,'eccentricity'), getValue(3,'orbitalPeriod'), time)[0];
-    earth.position.y = orbitalCalculations(getValue(3,'semimajorAxis'), getValue(3,'eccentricity'), getValue(3,'orbitalPeriod'), time)[1];
+   
     earthIndicatorEllipse.position.x = earth.position.x;
     earthIndicatorEllipse.position.y = earth.position.y;
 
     //mars
-    mars.position.x = orbitalCalculations(getValue(4,'semimajorAxis'), getValue(4,'eccentricity'), getValue(4,'orbitalPeriod'), time)[0];
-    mars.position.y = orbitalCalculations(getValue(4,'semimajorAxis'), getValue(4,'eccentricity'), getValue(4,'orbitalPeriod'), time)[1];
+  
     marsIndicatorEllipse.position.x = mars.position.x;
     marsIndicatorEllipse.position.y = mars.position.y;
 
     //jupiter
-    jupiter.position.x = orbitalCalculations(getValue(5,'semimajorAxis'), getValue(5,'eccentricity'), getValue(5,'orbitalPeriod'), time)[0];
-    jupiter.position.y = orbitalCalculations(getValue(5,'semimajorAxis'), getValue(5,'eccentricity'), getValue(5,'orbitalPeriod'), time)[1];
+
     jupiterIndicatorEllipse.position.x = jupiter.position.x;
     jupiterIndicatorEllipse.position.y = jupiter.position.y;
 
     //saturn
-    saturn.position.x = orbitalCalculations(getValue(6,'semimajorAxis'), getValue(6,'eccentricity'), getValue(6,'orbitalPeriod'), time)[0];
-    saturn.position.y = orbitalCalculations(getValue(6,'semimajorAxis'), getValue(6,'eccentricity'), getValue(6,'orbitalPeriod'), time)[1];
     saturnIndicatorEllipse.position.x = saturn.position.x;
     saturnIndicatorEllipse.position.y = saturn.position.y;
 
     //uranus
-    uranus.position.x = orbitalCalculations(getValue(7,'semimajorAxis'), getValue(7,'eccentricity'), getValue(7,'orbitalPeriod'), time)[0];
-    uranus.position.y = orbitalCalculations(getValue(7,'semimajorAxis'), getValue(7,'eccentricity'), getValue(7,'orbitalPeriod'), time)[1];
     uranusIndicatorEllipse.position.x = uranus.position.x;
     uranusIndicatorEllipse.position.y = uranus.position.y;
 
     //neptune
-    neptune.position.x = orbitalCalculations(getValue(8,'semimajorAxis'), getValue(8,'eccentricity'), getValue(8,'orbitalPeriod'), time)[0];
-    neptune.position.y = orbitalCalculations(getValue(8,'semimajorAxis'), getValue(8,'eccentricity'), getValue(8,'orbitalPeriod'), time)[1];
     neptuneIndicatorEllipse.position.x = neptune.position.x;
     neptuneIndicatorEllipse.position.y = neptune.position.y;
   }
   
-  //size scaling
-  sun.scale.set(changeSize(0), changeSize(0), changeSize(0));
-  mercury.scale.set(changeSize(1), changeSize(1), changeSize(1));
-  venus.scale.set(changeSize(2), changeSize(2), changeSize(2));
-  earth.scale.set(changeSize(3), changeSize(3), changeSize(3));
-  mars.scale.set(changeSize(4), changeSize(4), changeSize(4));
-  jupiter.scale.set(changeSize(5), changeSize(5), changeSize(5));
-  saturn.scale.set(changeSize(6), changeSize(6), changeSize(6));
-  uranus.scale.set(changeSize(7), changeSize(7), changeSize(7));
-  neptune.scale.set(changeSize(8), changeSize(8), changeSize(8));
+  planets.forEach((planet, i) => {
+    planet.scale.set(changeSize(i), changeSize(i), changeSize(i));
+  });
   
 }
 
