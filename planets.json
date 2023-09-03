@@ -5,7 +5,8 @@
             "rotationRate": 13.5,
             "planetSize": 430000,
             "maxSize": 100,
-            "tilt": 1.444
+            "tilt": 1.444,
+            "texture": "maps/2k_sun.jpg"
         },
         {
             "name": "Mercury",
@@ -15,7 +16,8 @@
             "semimajorAxis": 58000000,
             "eccentricity": 0.2,
             "maxSize": 15000,
-            "tilt": 1.57
+            "tilt": 1.57,
+            "texture": "maps/2k_mercury.jpg"
         },
         {
             "name": "Venus",
@@ -25,7 +27,8 @@
             "semimajorAxis": 108000000,
             "eccentricity": 0.007,
             "maxSize": 15000,
-            "tilt": 1.521
+            "tilt": 1.521,
+            "texture": "maps/2k_venus_surface.jpg"
         },
         {
             "name": "Earth",
@@ -35,7 +38,8 @@
             "semimajorAxis": 149000000,
             "eccentricity": 0.017,
             "maxSize": 15000,
-            "tilt": 1.161
+            "tilt": 1.161,
+            "texture": "maps/2k_earth_daymap.jpg"
         },
         {
             "name": "Mars",
@@ -45,7 +49,8 @@
             "semimajorAxis": 228000000,
             "eccentricity": 0.093,
             "maxSize": 15000,
-            "tilt": 1.141
+            "tilt": 1.141,
+            "texture": "maps/2k_mars.jpg"
         },
         {
             "name": "Jupiter",
@@ -55,7 +60,8 @@
             "semimajorAxis": 778000000,
             "eccentricity": 0.049,
             "maxSize": 1500,
-            "tilt": 1.521
+            "tilt": 1.521,
+            "texture": "maps/2k_jupiter.jpg"
         },
         {
             "name": "Saturn",
@@ -65,7 +71,8 @@
             "semimajorAxis": 1432000000,
             "eccentricity": 0.052,
             "maxSize": 1500,
-            "tilt": 1.1
+            "tilt": 1.1,
+            "texture": "maps/2k_saturn.jpg"
         },
         {
             "name": "Uranus",
@@ -75,7 +82,8 @@
             "semimajorAxis": 2867000000,
             "eccentricity": 0.0469,
             "maxSize": 1500,
-            "tilt": -0.134
+            "tilt": -0.134,
+            "texture": "maps/2k_uranus.jpg"
         },
         {
             "name": "Neptune",
@@ -85,7 +93,8 @@
             "semimajorAxis": 4514000000,
             "eccentricity": 0.0086,
             "maxSize": 1500,
-            "tilt": 1.05
+            "tilt": 1.05,
+            "texture": "maps/2k_neptune.jpg"
         }
     ]
 }
